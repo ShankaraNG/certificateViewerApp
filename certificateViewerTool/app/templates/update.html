@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 style="text-align:center; margin-top:20px;">Update Backend Entry</h2>
+
+<form id="updateForm" style="max-width:500px; margin: 20px auto;">
+    <input type="text" name="target_system" placeholder="System Name" required style="width:100%; padding:8px; margin-bottom:10px;">
+    <input type="text" name="target_host" placeholder="Host" required style="width:100%; padding:8px; margin-bottom:10px;">
+    <input type="text" name="target_port" placeholder="Port" required style="width:100%; padding:8px; margin-bottom:10px;">
+    <input type="email" name="target_team_email" placeholder="Team Email" required style="width:100%; padding:8px; margin-bottom:10px;">
+    <input type="email" name="target_manager_email" placeholder="Manager Email" required style="width:100%; padding:8px; margin-bottom:10px;">
+    <input type="text" name="target_contact" placeholder="Emergency Contact" required style="width:100%; padding:8px; margin-bottom:10px;">
+    <button type="submit" id="submitBtn" style="padding:10px 20px;">Update</button>
+</form>
+
+<!-- Loader -->
+<div class="loader" id="loader"></div>
+
+<!-- Message placeholder -->
+<div id="resultMessage" style="text-align:center; margin-top:20px; font-size:18px; color: #333;"></div>
+
+<script>
+    const form = document.getElementById('updateForm');
+    const loader = document.getElementById('loader');
+    const submitBtn = document.getElementById('submitBtn');
+    const resultMessage = document.getElementById('resultMessage');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        loader.style.display = 'block';
+        submitBtn.disabled = true;
+        resultMessage.innerText = '';  // Clear previous message
+
+        const formData = new FormData(form);
+
+        fetch('/update', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            loader.style.display = 'none';
+            submitBtn.disabled = false;
+            resultMessage.innerText = data.message;
+        })
+        .catch(error => {
+            loader.style.display = 'none';
+            submitBtn.disabled = false;
+            resultMessage.innerText = 'An error occurred while updating.';
+        });
+    });
+</script>
+
+{% endblock %}

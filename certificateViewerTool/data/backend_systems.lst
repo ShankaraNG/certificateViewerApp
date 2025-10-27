@@ -1,0 +1,8 @@
+System|Host|Port|Team_Email|Manager_Email|Emergency_Contact
+Apple|www.apple.com|443|shankarnarayana92@gmail.com|someteam@gmail.com|8088465232
+Microsoft|www.microsoft.com|443|shankarnarayana92@gmail.com|someteam@gmail.com|8088465232
+Google|www.google.com|443|shankarnarayana92@gmail.com|someteam@gmail.com|8088465232
+Cloudflare|www.cloudflare.com|443|shankarnarayana92@gmail.com|someteam@gmail.com|8088465232
+Wikipedia|www.wikipedia.org|443|shankarnarayana92@gmail.com|someteam@gmail.com|8088465232
+GitHub|github.com|443|shankarnarayana92@gmail.com|someteam@gmail.com|8088465232
+OpenSSL Project|www.openssl.org|443|newteam@gmail.com|newteam@cgi.com|8088465232

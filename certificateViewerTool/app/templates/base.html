@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-title">Certificate Viewer Tool</div>
+        <div class="nav-links">
+            {% if logged_in %}
+            <a href="{{ url_for('dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('search') }}">Search</a>
+            <a href="{{ url_for('update') }}">Update</a>
+            <a href="{{ url_for('add') }}">Add</a>
+            <a href="{{ url_for('remove') }}">Delete</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Content Block -->
+    {% block content %}{% endblock %}
+</body>
+</html>

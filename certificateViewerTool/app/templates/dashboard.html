@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="tile-container">
+    <a href="/view/green" style="text-decoration:none;">
+        <div class="tile green">
+            <div>Expiry > 30 Days</div>
+            <div>{{ green_count }}</div>
+        </div>
+    </a>
+    <a href="/view/yellow" style="text-decoration:none;">
+        <div class="tile yellow">
+            <div>Expiry < 30 Days</div>
+            <div>And</div>
+            <div>Expiry > 15 Days</div>
+            <div>{{ yellow_count }}</div>
+        </div>
+    </a>
+    <a href="/view/red" style="text-decoration:none;">
+        <div class="tile red">
+            <div>Expiry < 15 Days</div>
+            <div>{{ red_count }}</div>
+        </div>
+    </a>
+</div>
+{% endblock %}
