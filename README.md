@@ -1,10 +1,10 @@
-#Certificate Viewer App
+# Certificate Viewer App
 
 A Flask-based web application that reads a backend system list, makes live calls to each URL, and fetches SSL certificate details helping you monitor certificate health at a glance.
 
 ---
 
-##Overview
+# Overview
 
 The Certificate Viewer Tool connects to a list of backend systems and performs live SSL certificate lookups. It then categorizes each certificate into color-coded bins based on expiry date:
 
@@ -16,7 +16,7 @@ This makes it easy to quickly identify systems that need urgent attention before
 
 ---
 
-##Features
+# Features
 
 - Live SSL certificate fetching directly from URLs
 - Reads systems from a configurable backend list file
@@ -26,7 +26,7 @@ This makes it easy to quickly identify systems that need urgent attention before
 
 ---
 
-##Tech Stack
+# Tech Stack
 
 - **Language:** Python
 - **Framework:** Flask
@@ -34,7 +34,7 @@ This makes it easy to quickly identify systems that need urgent attention before
 
 ---
 
-## ⚙️ Prerequisites
+# Prerequisites
 
 Before running the application, ensure the following:
 
@@ -46,7 +46,7 @@ Before running the application, ensure the following:
 
 ---
 
-##Getting Started
+# Getting Started
 
 ### 1. Clone the repository
 
@@ -77,7 +77,7 @@ The application will start a local Flask server. Open your browser and navigate 
 ---
 
 
-## ⚠️ Important Notes
+## Important Notes
 
 - Make sure the **system configuration** is verified before running the application
 - Ensure all values in the **configuration properties file** are accurate
@@ -85,7 +85,7 @@ The application will start a local Flask server. Open your browser and navigate 
 
 ---
 
-## 👤 Author
+## Author
 
 **Shankar N G**
 
